@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    if sesssion[:name].nil?
+    if session[:name].nil?
       redirect to '/login'
     else
       session.delete :name
