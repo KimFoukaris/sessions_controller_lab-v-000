@@ -2,7 +2,8 @@
   <input name='name'>
   <input type='submit' value='login'>
 </form>
-
-
-
-
+<%= form_tag ("/login") do %>
+<%= label_tag("Name:") %>
+<%= text_field_tag(:name) %>
+<%= submit_tag("login") %>
+<% end %>
