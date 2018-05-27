@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     if session[:name].nil? || session[:name] == ''
-      <%= submit_tag("Search") %>
+      raise params.inspect
       redirect_to '/login'
     else
       session[:name] = params[:name]
